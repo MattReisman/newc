@@ -1,15 +1,15 @@
 // App component - represents the whole app
 App = React.createClass({
-  getSubmissions() {
-    return [
-      { _id: 1, text: "This is submission 1" },
-      { _id: 2, text: "This is submission 2" },
-      { _id: 3, text: "This is submission 3" }
-    ];
+  mixins: [ReactMeteorData],
+
+  getMeteorData() {
+    return {
+      submissions: Submissions.find({}).fetch()
+    }
   },
 
   renderSubmissions() {
-    return this.getSubmissions().map((submission) => {
+    return this.data.submissions.map((submission) => {
       return <Submission key={submission._id} submission={submission} />;
     });
   },
@@ -18,7 +18,8 @@ App = React.createClass({
     return (
       <div className="container">
         <header>
-          <h1>Submissions</h1>
+          <img src='favicon.png' alt='nothing' className='img-logo-inline'/>
+          <h1>   Submissions</h1>
         </header>
 
         <ul>

@@ -29,7 +29,7 @@ insecure                # Allow all DB writes from clients (for prototyping)
 
 ######################################
   #NEW PACKAGES#
-  react
-  stylus
-  kadira:flow-router
-  kadira:react-layout
+react
+#kadira:flow-router
+#kadira:react-layout
+fourseven:scss
