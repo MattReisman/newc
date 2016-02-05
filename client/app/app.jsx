@@ -3,12 +3,11 @@ App = React.createClass({
 
   getMeteorData() {
     return {
-      submissions: Submissions.find({}).fetch(),
+      submissions: Submissions.find({}, {sort: {createdAt: -1}}).fetch(),
     };
   },
 
   renderSubmissions() {
-    console.log('test it');
     return this.data.submissions.map((submission) => {
       return <Submission key={submission._id} submission={submission} />;
     });
@@ -29,7 +28,6 @@ App = React.createClass({
   },
 
   render() {
-    console.log(this.props);
     return (
       <div className="container">
         <header>
