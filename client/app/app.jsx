@@ -16,6 +16,16 @@ App = React.createClass({
 
   handleSubmit(event) {
     event.preventDefault();
+
+    // Pull text from field
+    var text = React.findDOMNode(this.refs.textInput).value.trim();
+    Submissions.insert({
+      text: text,
+      createdAt: new Date(),
+    });
+
+    // Clear form
+    React.findDOMNode(this.refs.textInput).value = '';
   },
 
   render() {
@@ -36,6 +46,7 @@ App = React.createClass({
           {this.renderSubmissions()}
         </ul>
       </div>
+// <News />
     );
   },
 });
