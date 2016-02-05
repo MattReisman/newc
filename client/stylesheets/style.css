@@ -31,11 +31,15 @@ body {
   margin: 0 auto;
   min-height: 100%;
   background: white;
+  border-radius: 0px 0px 10px 10px;
+  /*padding-bottom: 1rem;*/
+  padding: 0rem .1rem 1rem .1rem;
+  background-color: rgba(255, 255, 255, 0.9);;
 }
 
 header {
   background: #d2edf4;
-  background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+  background-image: linear-gradient(to bottom, #35455A, #204A6A 100%);
   padding: 20px 15px 15px 15px;
   position: relative;
 }
@@ -47,6 +51,7 @@ header {
 h1 {
   font-size: 1.5em;
   margin: 0;
+  color: #ddd;
   margin-bottom: 10px;
   display: inline-block;
   margin-right: 1em;
@@ -60,12 +65,14 @@ form {
 
 .new-submission input {
   box-sizing: border-box;
-  padding: 10px 0;
+  padding: 1rem;
   background: transparent;
-  border: none;
+  border: 1px solid #aaa;
   width: 100%;
   padding-right: 80px;
   font-size: 1em;
+  color: #204A6A;
+  background: rgba(255,255,255,.9);
 }
 
 .new-submission input:focus{
@@ -95,7 +102,22 @@ li {
 }
 
 li .text {
-  margin-left: 10px;
+  margin-left: 1rem;
+  color: #204A6A;
+  /*color: #35455A;*/
+}
+
+li .subDate {
+  margin-left: 1rem;
+  text-align: right;
+  color: #aaa;
+  font-size: .8rem;
+}
+
+li .time-elapsed {
+  font-style: italic;
+  color: #59c;
+  margin-left: 1.5rem;
 }
 
 li.checked {

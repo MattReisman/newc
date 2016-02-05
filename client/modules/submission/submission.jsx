@@ -15,6 +15,11 @@ Submission = React.createClass({
 
   render() {
     const submissionClassName = this.props.submission.checked ? 'checked' : '';
+    const rawDate = this.props.submission.createdAt;
+    const formattedDate = moment(rawDate).format('MMMM Do YYYY, h:mm');
+    const elapsedTime = moment(rawDate).startOf(rawDate).fromNow();
+    // const momDate = "test';
+
     return (
       <li className={submissionClassName}>
         <button className='delete' onClick={this.deleteThisSubmission}>
@@ -27,6 +32,8 @@ Submission = React.createClass({
           onClick={this.toggleChecked}
         />
       <span className='text'>{this.props.submission.text}</span>
+      <span className='time-elapsed'>{elapsedTime}</span>
+      <span className='subDate'>{formattedDate}</span>
       </li>
     );
   },
