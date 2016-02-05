@@ -1,9 +1,10 @@
 // App component - represents the whole app
 App = React.createClass({
+    // This mixin makes the getMeteorData method work
   mixins: [ReactMeteorData],
 
   getMeteorData() {
-    return {
+    return{
       submissions: Submissions.find({}).fetch()
     }
   },
@@ -18,8 +19,7 @@ App = React.createClass({
     return (
       <div className="container">
         <header>
-          <img src='favicon.png' alt='nothing' className='img-logo-inline'/>
-          <h1>   Submissions</h1>
+          <h1>Submissions</h1>
         </header>
 
         <ul>
