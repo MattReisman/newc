@@ -126,6 +126,7 @@ li.checked {
 
 li.checked .text {
   text-decoration: line-through;
+  color: #777;
 }
 
 li.private {
