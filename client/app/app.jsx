@@ -1,28 +1,40 @@
 App = React.createClass({
     mixins: [ReactMeteorData],
     getInitialState() {
-        return {
-            hideCompleted: false
-        };
+        return {hideCompleted: false, showCompleted: false};
     },
 
     getMeteorData() {
         let query = {};
 
         if (this.state.hideCompleted) {
-            query = {checked: {$ne: true}};
+            query = {
+                checked: {
+                    $ne: true
+                }
+            };
+        }
+        if (this.state.showCompleted) {
+            query = {
+                checked: true
+            };
         }
         return {
-            submissions: Submissions.find(query, {
+            submissions: Submissions
+                .find(query, {
                 sort: {
                     createdAt: -1
                 }
-            }).fetch()
+            })
+                .fetch()
         };
     },
     renderSubmissions() {
-        return this.data.submissions.map((submission) => {
-                return <Submission key={submission._id} submission={submission} />;
+        return this
+            .data
+            .submissions
+            .map((submission) => {
+                return <Submission key={submission._id} submission={submission}/>;
             });
     },
     handleSubmit(event) {
@@ -47,22 +59,39 @@ App = React.createClass({
             hideCompleted: !this.state.hideCompleted
         });
     },
+    toggleShowCompleted() {
+        this.setState({
+            showCompleted: !this.state.showCompleted
+        });
+    },
     render() {
         return (
             <div className="container">
-                <header>
+                <header className='app-header'>
                     <h1>Submissions</h1>
-                    <label className="hide-completed">
-                        <input type="checkbox" readOnly={true} checked={this.state.hideCompleted} onClick={this.toggleHideCompleted}/>
-                        Hide Completed Activities
-                    </label>
-                    <form className="new-submission" onSubmit={this.handleSubmit}>
-                        <input type="text" ref="textInput" placeholder="Type to add new tasks"/>
-                    </form>
+                    <div className='row'>
+                        <div className="one-half column">
+                            <label className="hide-completed">
+                                <input type="checkbox" readOnly={true} checked={this.state.hideCompleted} onClick={this.toggleHideCompleted}/>
+                                Hide Completed Activities
+                            </label>
+                        </div>
+                        <div className="one-half column">
+                            <label className="show-completed">
+                                <input type="checkbox" readOnly={true} checked={this.state.showCompleted} onClick={this.toggleShowCompleted}/>
+                                Show Only Completed Activities
+                            </label>
+                        </div>
+                    </div>
+
                 </header>
                 <ul>
                     {this.renderSubmissions()}
                 </ul>
+                <form className="new-submission" onSubmit={this.handleSubmit}>
+                    <input type="text" ref="textInput" placeholder="Type to add new tasks"/>
+                </form>
+
             </div>
         );
     }

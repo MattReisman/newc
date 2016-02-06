@@ -8,6 +8,17 @@
   width: 2rem;
 }
 
+.app-header {
+  color: #eee;
+  text-align: center;
+}
+.app-header > h1 {
+  color: #59c;
+}
+.app-header > .row {
+  text-align: left;
+}
+
 body {
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #315481;
