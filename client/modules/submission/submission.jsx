@@ -26,12 +26,12 @@ Submission = React.createClass({
             .fromNow();
         // const momDate = "test';
 
-        return (< li className = {
+        return ( < li className = {
             submissionClassName
         } > < button className = 'delete' onClick = {
             this.deleteThisSubmission
-        } > & times;
-        </button> < input type = 'checkbox'
+        } > <i className="fa fa-trash-o"></i> < /button>
+        < input type = 'checkbox'
 			readOnly = {
 				true
 			}
@@ -48,5 +48,5 @@ Submission = React.createClass({
 			} < /span > < span className = 'subDate' > {
             formattedDate
         } < /span> < /li >);
-    },
+    }
 });

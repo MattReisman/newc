@@ -30,10 +30,10 @@ insecure                # Allow all DB writes from clients (for prototyping)
 ######################################
   #NEW PACKAGES#
 react
-#kadira:flow-router
-#kadira:react-layout
-#fourseven:scss
+kadira:flow-router
+kadira:react-layout
 momentjs:moment
 msavin:mongol
+
 fourseven:scss
 fortawesome:fontawesome
