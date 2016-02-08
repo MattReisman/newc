@@ -1,20 +1,54 @@
-
-.img-responsive {
-  height: auto;
-  width: 100%;
+.app-body {
+    position        : absolute;
+    top             : 0;
+    left            : 5%;
+    width           : 90%;
+    min-height      : 90vh;
+    max-width       : 900px;
+    margin          : 0 auto 1rem;
+    background-color: rgba(250,250,250,.99);
+    border-radius   : 0 0 4px 4px;
+    box-shadow      : 0 0 4px 0 rgba(0,0,0,.5);
 }
-.img-logo-inline {
-  height: 2rem;
-  width: 2rem;
+.header-top {
+    position        : fixed;
+    top             : 0;
+    left            : 5%;
+    height          : 4rem;
+    width           : 90%;
+    max-width       : 900px;
+    padding         : 0.5rem;
+    background-color: #3C4C6A;
+    box-shadow      : 0 0 4px 0 rgba(0,0,0,.5);
+    .header-top-left {
+        float: left;
+        width: 25%;
+        img {
+            height     : 3rem;
+            width      : auto;
+            margin-left: 1rem;
+        }
+    }
+    .header-top-center {
+        float     : left;
+        width     : 50%;
+        text-align: center;
+    }
+    .header-top-right {
+        float     : left;
+        width     : 25%;
+        text-align: right;
+        color     : #eee;
+        i.fa.fa-bars {
+            margin-right: 0.5rem;
+            margin-top  : 0.25rem;
+            font-size   : 2.5rem;
+        }
+    }
 }
-
-.app-header {
-  color: #eee;
-  text-align: center;
-}
-.app-header > h1 {
-  color: #59c;
-}
-.app-header > .row {
-  text-align: left;
+.footer {
+    position: absolute;
+    bottom  : 0;
+    left    : 0;
+    width   : 100%;
 }
