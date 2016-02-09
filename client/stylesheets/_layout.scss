@@ -12,6 +12,8 @@
 }
 .header-top {
     position        : absolute;
+    box-sizing      : border-box;
+    z-index         : 100;
     top             : 0;
     left            : 0;
     height          : 4rem;
@@ -39,21 +41,37 @@
         width     : 25%;
         text-align: right;
         color     : #eee;
-        i.fa.fa-bars {
-            margin-right: 0.5rem;
-            margin-top  : 0.25rem;
-            font-size   : 2.5rem;
+        .dropdown {
+            button {
+                border: none;
+                i.fa.fa-bars {
+                    margin-right: 0.5rem;
+                    margin-top  : 0.25rem;
+                    font-size   : 2.5rem;
+                    color       : white;
+                }
+            }
+        }
+        .dropdown-menu {
+            background-color: $blue-dark;
+            color           : white;
         }
     }
 }
+.app-main {
+    position   : relative;
+    top        : 4rem;
+    padding-top: 2rem;
+    // background: red;
+}
 .footer {
-    position: absolute;
-    bottom  : 0;
-    left    : 0;
-    width   : 100%;
-    height: 2.5rem;
-    line-height: 2.5rem;
-    text-align: center;
+    position        : absolute;
+    bottom          : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 2.5rem;
+    line-height     : 2.5rem;
+    text-align      : center;
     background-color: #444;
-    color: white;
+    color           : white;
 }

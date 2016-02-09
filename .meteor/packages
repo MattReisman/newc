@@ -28,13 +28,31 @@ insecure                # Allow all DB writes from clients (for prototyping)
 
 
 ######################################
-  #NEW PACKAGES#
-react
-kadira:flow-router
-kadira:react-layout
-momentjs:moment
+  #DEV TOOLS#
 msavin:mongol
 
-fourseven:scss
-fortawesome:fontawesome
+######################################
+  #ACCOUNTS#
 accounts-password
+
+######################################
+  #ROUTING#
+  kadira:flow-router
+
+######################################
+  #LANGUAGE SUPPORT#
+  fourseven:scss
+
+######################################
+  #LIBRARIES#
+react
+kadira:react-layout
+twbs:bootstrap
+mrt:jquery-ui
+ian:accounts-ui-bootstrap-3
+fortawesome:fontawesome
+underscore
+momentjs:moment
+
+######################################
+#NEW PACKAGES#

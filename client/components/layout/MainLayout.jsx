@@ -19,7 +19,7 @@ MainLayout  = React.createClass({
         {this.props.header}
 
         {this.props.content}
-
+        
         {this.props.footer}
       </div>
     )
