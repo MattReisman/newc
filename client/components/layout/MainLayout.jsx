@@ -15,7 +15,7 @@ MainLayout  = React.createClass({
 
   render () {
     return (
-      <div>
+      <div className='app-body'>
         {this.props.header}
 
         {this.props.content}
