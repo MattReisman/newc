@@ -1,4 +1,4 @@
-App = React.createClass({
+List = React.createClass({
     mixins: [ReactMeteorData],
     getInitialState() {
         return {hideCompleted: false, showCompleted: false};
@@ -72,11 +72,9 @@ App = React.createClass({
     },
     render() {
         return (
-            <div className="container app-main">
-                <form className="new-submission" onSubmit={this.handleSubmit}>
-                    <input type="text" ref="textInput" placeholder="Type to add new tasks"/>
-                </form>
-            </div>
+            <ul>
+                {this.renderSubmissions()}
+            </ul>
         );
     }
 });

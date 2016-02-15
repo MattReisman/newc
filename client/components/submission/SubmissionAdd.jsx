@@ -1,7 +1,7 @@
-App = React.createClass({
+SubmissionAdd = React.createClass({
     mixins: [ReactMeteorData],
     getInitialState() {
-        return {hideCompleted: false, showCompleted: false};
+        return {hideCompleted: false, showCompleted: false,};
     },
     getMeteorData() {
         let query = {};
@@ -51,7 +51,7 @@ App = React.createClass({
             owner: Meteor.userId(),
             username: Meteor
                 .user()
-                .username
+                .username,
         });
 
         // Clear form
@@ -72,11 +72,11 @@ App = React.createClass({
     },
     render() {
         return (
-            <div className="container app-main">
+            <div>
                 <form className="new-submission" onSubmit={this.handleSubmit}>
                     <input type="text" ref="textInput" placeholder="Type to add new tasks"/>
                 </form>
             </div>
         );
-    }
+    },
 });

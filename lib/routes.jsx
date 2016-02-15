@@ -12,6 +12,27 @@ FlowRouter.route('/', {
   },
 });
 
+FlowRouter.route('/list', {
+  name: 'List',
+  action(params) {
+    renderMainLayoutWith(<List />);
+  },
+});
+
+FlowRouter.route('/map', {
+  name: 'Map',
+  action(params) {
+    renderMainLayoutWith(<Map />);
+  },
+});
+
+FlowRouter.route('/trail', {
+  name: 'Trail',
+  action(params) {
+    renderMainLayoutWith(<Trail />);
+  },
+});
+
 FlowRouter.route('/login', {
   name: 'Login',
   action(params) {

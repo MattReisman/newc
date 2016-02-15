@@ -1,16 +1,21 @@
 // colors
+$blue-bright: hsla(218,78%,83%,1);
+$blue-light: #8699BB;
+$blue-mid: hsla(218,28%,43%,1);
 $blue-dark: #3C4C6A;
 $blue-ultradark: #2C3C5A;
-
+$blue-ultradark2: hsla(218,28%,15%,1);
 $white: #fff;
 $grey-ultralight: #eee;
 
+$charcoal: #3C4C6A;
+$charcoal-dark: #444;
+$header-height: 4rem;
+
 .app-body {
     position        : relative;
-    // top             : 0;
-    // left            : 5%;
-    width           : 90%;
-    min-height      : 90vh;
+    height          : 100vh;
+    min-height      : 100vh;
     max-width       : 900px;
     margin          : 0 auto 1rem;
     background-color: rgba(250,250,250,.99);
@@ -18,16 +23,16 @@ $grey-ultralight: #eee;
     box-shadow      : 0 0 4px 0 rgba(0,0,0,.5);
 }
 .header-top {
-    position        : absolute;
+    position        : fixed;
     box-sizing      : border-box;
     z-index         : 100;
     top             : 0;
     left            : 0;
-    height          : 4rem;
+    height          : $header-height;
     width           : 100%;
-    max-width       : 900px;
+    // max-width       : 900px;
     padding         : 0.5rem;
-    background-color: #3C4C6A;
+    background-color: $blue-ultradark;
     box-shadow      : 0 0 4px 0 rgba(0,0,0,.5);
     .header-top-left {
         float: left;
@@ -46,7 +51,7 @@ $grey-ultralight: #eee;
     .header-top-right {
         float     : left;
         width     : 25%;
-        height: 100%;
+        height    : 100%;
         text-align: right;
         color     : $white;
         .dropdown {
@@ -63,40 +68,66 @@ $grey-ultralight: #eee;
         .dropdown-menu {
             background-color: $blue-dark;
             color           : $white;
-
         }
         div#login-buttons {
-          padding-top: .8rem;
+            padding-top: 0.8rem;
+            margin-right: 1rem;
+            position   : absolute;
+            right      : 0;
+            top        : 0;
+            min-width  : 250px;
+            font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            font-weight: normal;
+            a {
+                text-decoration: none;
+                font-size: 1.5rem;
+                line-height: 2.6rem;
+                text-transform: uppercase;
+                color: $blue-bright;
+            }
+            .login-button {
+                background-color: $blue-dark;
+            }
         }
-        a#login-sign-in-link, a#login-name-link {
-          color: $white;
-          font-weight: 100;
-          text-decoration: none;
-          margin-top: 1rem;
-          text-transform: uppercase;
+        a#login-sign-in-link,
+        a#login-name-link {
+            color          : $white;
+            font-weight    : 100;
+            text-decoration: none;
+            margin-top     : 1rem;
+            text-transform : uppercase;
         }
     }
 }
-
 .app-main {
     position   : relative;
-    top        : 4rem;
+    max-height: 100vh;
+    overflow: scroll;
+    top        : $header-height;
     padding-top: 2rem;
     // background: red;
 }
 .subheader-body {
     h1 {
-    color: $blue-dark;
-}
+        color: $blue-dark;
+    }
 }
 .footer {
-    position        : absolute;
+    position        : fixed;
     bottom          : 0;
     left            : 0;
     width           : 100%;
-    height          : 2.5rem;
+    height          : 6rem;
+    z-index         : 100;
+    padding         : 1rem;
+    max-height      : 8rem;
     line-height     : 2.5rem;
     text-align      : center;
-    background-color: #444;
+    background-color: $blue-ultradark;
     color           : $white;
+    a {
+        text-decoration: none;
+        color          : white;
+    }
 }

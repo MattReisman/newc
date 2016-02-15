@@ -17,9 +17,9 @@ MainLayout  = React.createClass({
     return (
       <div className='app-body'>
         {this.props.header}
-
-        {this.props.content}
-        
+        <div className="container app-main">
+            {this.props.content}
+        </div>
         {this.props.footer}
       </div>
     )

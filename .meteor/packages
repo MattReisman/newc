@@ -33,8 +33,10 @@ msavin:mongol
 
 ######################################
   #ACCOUNTS#
-accounts-ui
+
 accounts-password
+accounts-ui
+#ian:accounts-ui-bootstrap-3
 
 ######################################
   #ROUTING#
@@ -50,7 +52,7 @@ react
 kadira:react-layout
 twbs:bootstrap
 mrt:jquery-ui
-#ian:accounts-ui-bootstrap-3
+
 fortawesome:fontawesome
 underscore
 momentjs:moment

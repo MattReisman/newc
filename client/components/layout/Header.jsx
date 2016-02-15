@@ -10,9 +10,10 @@ Header = React.createClass({
                 <div className='header-top-center'>
                     <a href='/'>
                       <h1>
-                        <span className='hidden-xs hidden-sm'>New England Wildlife Center</span>
+                        <span className='hidden-xs'>New England Wildlife Center</span>
+                        <span className='visible-xs'>NEWC</span>
+                      </h1>
                     </a>
-                    </h1>
                 </div>
                 <div className='header-top-right text-right'>
                     <AccountsUIWrapper/>

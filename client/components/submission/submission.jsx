@@ -24,29 +24,23 @@ Submission = React.createClass({
         const elapsedTime = moment(rawDate)
             .startOf(rawDate)
             .fromNow();
-        // const momDate = "test';
 
-        return ( < li className = {
-            submissionClassName
-        } > < button className = 'delete' onClick = {
-            this.deleteThisSubmission
-        } > <i className="fa fa-trash-o"></i> < /button>
-        < input type = 'checkbox'
-			readOnly = {
-				true
-			}
-			checked = {
-				this.props.submission.checked
-			}
-			onClick = {
-				this.toggleChecked
-			}
-			/ > < span className = 'text' > {
-            this.props.submission.text
-        } < /span> < span className = 'time-elapsed' > {
-				elapsedTime
-			} < /span > < span className = 'subDate' > {
-            formattedDate
-        } < /span> < /li >);
+        return (
+            <li className={submissionClassName}>
+                <button className='delete' onClick={this.deleteThisSubmission}>
+                    <i className="fa fa-trash-o"></i>
+                </button>
+                <input type='checkbox' readOnly={true} checked={this.props.submission.checked} onClick={this.toggleChecked}/>
+                <span className='text'>
+                    {this.props.submission.text}
+                </span>
+                <span className='time-elapsed'>
+                    {elapsedTime}
+                </span>
+                <span className='subDate'>
+                    {formattedDate}
+                </span>
+            </li>
+        );
     }
 });
