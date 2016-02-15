@@ -1,3 +1,10 @@
+// colors
+$blue-dark: #3C4C6A;
+$blue-ultradark: #2C3C5A;
+
+$white: #fff;
+$grey-ultralight: #eee;
+
 .app-body {
     position        : relative;
     // top             : 0;
@@ -39,8 +46,9 @@
     .header-top-right {
         float     : left;
         width     : 25%;
+        height: 100%;
         text-align: right;
-        color     : #eee;
+        color     : $white;
         .dropdown {
             button {
                 border: none;
@@ -48,21 +56,38 @@
                     margin-right: 0.5rem;
                     margin-top  : 0.25rem;
                     font-size   : 2.5rem;
-                    color       : white;
+                    color       : $white;
                 }
             }
         }
         .dropdown-menu {
             background-color: $blue-dark;
-            color           : white;
+            color           : $white;
+
+        }
+        div#login-buttons {
+          padding-top: .8rem;
+        }
+        a#login-sign-in-link, a#login-name-link {
+          color: $white;
+          font-weight: 100;
+          text-decoration: none;
+          margin-top: 1rem;
+          text-transform: uppercase;
         }
     }
 }
+
 .app-main {
     position   : relative;
     top        : 4rem;
     padding-top: 2rem;
     // background: red;
+}
+.subheader-body {
+    h1 {
+    color: $blue-dark;
+}
 }
 .footer {
     position        : absolute;
@@ -73,5 +98,5 @@
     line-height     : 2.5rem;
     text-align      : center;
     background-color: #444;
-    color           : white;
+    color           : $white;
 }

@@ -33,6 +33,7 @@ msavin:mongol
 
 ######################################
   #ACCOUNTS#
+accounts-ui
 accounts-password
 
 ######################################
@@ -49,7 +50,7 @@ react
 kadira:react-layout
 twbs:bootstrap
 mrt:jquery-ui
-ian:accounts-ui-bootstrap-3
+#ian:accounts-ui-bootstrap-3
 fortawesome:fontawesome
 underscore
 momentjs:moment

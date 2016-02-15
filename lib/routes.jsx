@@ -1,7 +1,14 @@
+// FlowRouter.route('/', {
+//   name: 'Home',
+//   action(params) {
+//     renderMainLayoutWith(<Home />);
+//   },
+// });
+
 FlowRouter.route('/', {
-  name: 'Home',
+  name: 'App',
   action(params) {
-    renderMainLayoutWith(<Home />);
+    renderMainLayoutWith(<App />);
   },
 });
 

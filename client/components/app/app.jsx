@@ -3,7 +3,6 @@ App = React.createClass({
     getInitialState() {
         return {hideCompleted: false, showCompleted: false};
     },
-
     getMeteorData() {
         let query = {};
 
@@ -46,7 +45,14 @@ App = React.createClass({
             .findDOMNode(this.refs.textInput)
             .value
             .trim();
-        Submissions.insert({text: text, createdAt: new Date()});
+        Submissions.insert({
+            text: text,
+            createdAt: new Date(),
+            owner: Meteor.userId(),
+            username: Meteor
+                .user()
+                .username
+        });
 
         // Clear form
 
@@ -66,9 +72,11 @@ App = React.createClass({
     },
     render() {
         return (
-            <div className="container">
+            <div className="container app-main">
+                <ViewSelect />
                 <header className='app-header'>
-                    <h1>Submissions</h1>
+                    {/*<SubHeader/>*/}
+                    <h1>List View</h1>
                     <div className='row'>
                         <div className="one-half column">
                             <label className="hide-completed">

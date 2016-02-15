@@ -1,3 +1,4 @@
+$blue-dark: #3C4C6A;
 
 .img-responsive {
   height: auto;
@@ -161,4 +162,26 @@ header .hide-completed {
   .new-submission input {
     padding-bottom: 5px;
   }
+}
+
+// subheader
+.view-select {
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  background-color: $blue-dark;
+  color: white;
+  .row {
+    width: 100%;
+    margin: .2rem auto;
+  }
+}
+ .col-view-select {
+  padding: 0;
+ }
+.btn-view-select {
+  width: 95%;
+  height: 4rem;
+  color: $blue-dark;
+  background-color: white;
 }
