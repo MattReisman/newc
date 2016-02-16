@@ -1,7 +1,10 @@
 Map = React.createClass({
     render() {
         return (
-            <img src='map.png'></img>
+<div className='container'>
+  /*<TestMap />
+*/
+</div>
         );
     }
 });
