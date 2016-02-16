@@ -59,3 +59,27 @@
   input::-moz-placeholder {font-weight: $weight}
   input:-ms-input-placeholder {font-weight: $weight}
 }
+
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.fileUpload input.uploads {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.icon-descriptor {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}

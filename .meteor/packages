@@ -56,6 +56,6 @@ mrt:jquery-ui
 fortawesome:fontawesome
 underscore
 momentjs:moment
-
+dburles:google-maps
 ######################################
 #NEW PACKAGES#

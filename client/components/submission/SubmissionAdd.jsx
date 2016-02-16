@@ -38,7 +38,7 @@ AddSubmission = React.createClass({
             owner: Meteor.userId(),
             username: Meteor
                 .user()
-                .username,
+                .username
         });
 
         // Clear form
@@ -60,38 +60,74 @@ AddSubmission = React.createClass({
     render() {
         return (
             <div className='jumbotron add-submission'>
-              <h1><i className='fa fa-plus'></i>
-              Submission</h1>
-            <hr />
+                <h3>
+                    <i className='fa fa-plus'></i>
+                    Submission</h3>
+                <hr/>
                 <form className="new-submission form-horizontal" onSubmit={this.handleSubmit}>
                     <fieldset>
                         <div className="form-group">
-                            <label htmlFor="subjectAdd" className="col-lg-2 control-label">Subject</label>
-                            <div className="col-lg-10">
-                                <input type="text" className="form-control" id="subjectAdd" placeholder="Email"/>
-                            </div>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="contentAdd">Password</label>
-                            <input type="text-field" className="form-control" id="contentAdd" placeholder="Add Content"/>
-                        </div>
-                        <div className='form-group'>
-                            <label htmlFor="textArea" className="col-lg-2 control-label">Content</label>
-                            <div className="col-lg-10">
-                                <textarea className="form-control" rows={3} id="textArea" defaultValue={""}/>
-                                <span className="help-block">Add details here.</span>
-                            </div>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="exampleInputFile">File input</label>
-                            <input type="file" id="exampleInputFile"/>
-                            <p className="help-block">Example block-level help text here.</p>
-                        </div>
-                        <div className="checkbox">
-                            <label>
-                                <input type="checkbox"/>
-                                Check me out
+                            <label htmlFor="subjectAdd" className="col-lg-2 control-label">
+                                <i className="fa fa-plus-square"></i>
+                                <span className='icon-descriptor'>
+                                    Subject</span>
                             </label>
+                            <div className="col-lg-10">
+                                <input type="text" className="form-control" id="subjectAdd" placeholder="50 characters or less"/>
+                            </div>
+                        </div>
+
+                        <div className='form-group'>
+                            <label htmlFor="textArea" className="col-lg-2 control-label">
+                                <i className="fa fa-file-text-o"></i>
+                                <span className='icon-descriptor'>
+                                    Content</span>
+                            </label>
+                            <div className="col-lg-10">
+                                <textarea className="form-control" rows={3} id="textArea" placeholder="add Content" defaultValue={""}/>
+
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <label className='col-lg-2'>
+                                <i className="fa fa-file-image-o"></i>
+                                <span className='icon-descriptor'>
+                                    Media</span>
+                            </label>
+                            <div className='col-lg-10'>
+                                <div className="fileUpload btn btn-upload">
+                                    <i className='fa fa-cloud-upload'>
+                                        <span className='icon-descriptor'>upload</span>
+                                    </i>
+                                    <input type="file" className="uploads"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="locationAdd" className="col-lg-2 control-label">
+                                <i className="fa fa-map-marker"></i>
+                                <span className='icon-descriptor'>
+                                    Location</span>
+                            </label>
+                            <div className="col-lg-10">
+                                <input type="text" className="form-control" id="locationAdd" placeholder="address or gps coordinates"/>
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="Trailselect" className="col-lg-3 control-label">
+                                <i className="fa fa-map-o"></i>
+                                <span className='icon-descriptor'>
+                                    Add to Trailmap</span>
+                            </label>
+                            <div className="col-lg-9">
+                                <select className="form-control" id="select">
+                                    <option>-----</option>
+                                    <option>NEWC Indoor Nature Trail</option>
+                                    <option>NEWC Outdoor Nature Trail</option>
+                                    <option>Great Esker Park</option>
+                                    <option>Bare Cove Park</option>
+                                </select>
+                            </div>
                         </div>
                         <div className="form-group">
                             <div className="col-lg-10 col-lg-offset-2">
@@ -103,5 +139,5 @@ AddSubmission = React.createClass({
                 </form>
             </div>
         );
-    },
+    }
 });

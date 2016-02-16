@@ -1,19 +1,64 @@
 .add-submission {
     // background-image: radial-gradient($blue-light, $blue-bright);
-    background: $blue-light;
+    background-color: rgba($blue-bright, .25);
     @extend .z-well;
     h1 {
         color: $blue-bright;
     }
     .new-submission {
-        input.form-control {
-            background-color: white;
+        input.form-control,
+        textarea.form-control {
             @extend .z-well;
-            background-color: $charcoal;
+            background-color: $aqua;
+            transition: all .5s ease-out;
+            &:active, &:focus {
+              background-color: white;
+              color: $blue-ultradark;
+            }
         }
-        @include placecolor($blue-bright);
+        // @include placecolor($blue-bright);
     }
     button {
         @extend .z-pop;
     }
+}
+.fileUpload {
+    position      : relative;
+    // overflow: hidden;
+    margin        : 10px;
+    @extend .z-pop;
+    text-transform: uppercase;
+    input.uploads {
+        position : absolute;
+        top      : 0;
+        right    : 0;
+        margin   : 0;
+        padding  : 0;
+        font-size: 20px;
+        cursor   : pointer;
+        width: 95%;
+        margin: .1rem auto;
+        // z-index: -1;
+        // opacity: 0;
+        // filter: alpha(opacity=0);
+    }
+}
+.btn-upload, #select.form-control {
+  background-color: $aqua;
+  color: white;
+  border-radius: 5px;
+  transition: all 1s ease;
+  &:active, &:hover, &:focus {
+    background-color: white;
+    color: $blue-ultradark;
+  }
+}
+
+.group-well {
+  @extend .well;
+  background-color: $charcoal-dark;
+  padding: 1rem;
+  label {
+    color: white;
+  }
 }
