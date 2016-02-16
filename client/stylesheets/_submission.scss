@@ -1,3 +1,95 @@
+$blue-dark-border: rgba($blue-ultradark2, .8);
+.singleSubmission {
+    background-color: $blue-ultradark2;
+    border-radius   : 5px;
+    @extend .z-depth-3;
+    text-align      : center;
+    .data-title {
+        position        : absolute;
+        left            : 0;
+        top             : 0;
+        width: 100%;
+        color           : #ccc;
+        font-size       : 1rem;
+        float           : left;
+        margin          : 0 1rem 1rem 0;
+        padding         : 0.2rem;
+        background-color: $blue-dark-border;
+        color: $aqua-dull;
+        text-align: left;
+    }
+    .data-content {
+        color      : white;
+        height     : 5rem;
+        line-height: 3rem;
+        position   : relative;
+        bottom     : -3rem;
+    }
+    .title-box {
+        .title-font {
+            color     : white;
+            font-size : 3rem;
+            text-align: left;
+        }
+        i {
+            color    : $aqua-glow;
+            font-size: 4rem;
+        }
+    }
+    hr {
+        margin        : 1rem 1rem 0 0;
+        padding-bottom: 0;
+    }
+    .subtitle-box {
+        width           : 100%;
+        // padding-left: 15px;
+        height: 100%;
+        margin          : 0 auto;
+        text-align      : left;
+        background-color: $blue-ultradark;
+        .subtitle-box-section {
+            position: relative;
+            &:nth-child(2) {
+                border-left: .5rem solid $blue-dark-border;
+            }
+        }
+    }
+    .content-box {
+        @extend .z-well;
+        border          : 1px solid $blue-dark;
+        border-radius   : 0;
+        padding-left    : 15px;
+        background-color: $blue-mid;
+        position        : relative;
+        margin          : 0 auto;
+    }
+    .location-box {
+        width           : 100%;
+        padding-left    : 0;
+        margin          : 0 auto;
+        border          : 1px solid $blue-mid;
+        background-color: $blue-light;
+        color           : white;
+        position        : relative;
+        .location-section {
+          &:nth-child(2) {
+              border-left: .5rem solid $blue-dark-border;
+          }
+        }
+        .location-map-view {
+          border-top: .3rem solid $blue-dark-border;
+        }
+    }
+      .trail-box {
+        width           : 100%;
+        padding-left    : 0;
+        margin          : 0 auto;
+        border          : 1px solid $blue-mid;
+        background-color: rgba(255,255,255,.9);
+        color           : white;
+        position        : relative;
+      }
+}
 .add-submission {
     // background-image: radial-gradient($blue-light, $blue-bright);
     background-color: rgba($blue-bright, .25);
@@ -10,10 +102,11 @@
         textarea.form-control {
             @extend .z-well;
             background-color: $aqua;
-            transition: all .5s ease-out;
-            &:active, &:focus {
-              background-color: white;
-              color: $blue-ultradark;
+            transition      : all 0.5s ease-out;
+            &:active,
+            &:focus {
+                background-color: white;
+                color           : $blue-ultradark;
             }
         }
         // @include placecolor($blue-bright);
@@ -36,29 +129,31 @@
         padding  : 0;
         font-size: 20px;
         cursor   : pointer;
-        width: 95%;
-        margin: .1rem auto;
+        width    : 95%;
+        margin   : 0.1rem auto;
         // z-index: -1;
         // opacity: 0;
         // filter: alpha(opacity=0);
     }
 }
-.btn-upload, #select.form-control {
-  background-color: $aqua;
-  color: white;
-  border-radius: 5px;
-  transition: all 1s ease;
-  &:active, &:hover, &:focus {
-    background-color: white;
-    color: $blue-ultradark;
-  }
+.btn-upload,
+#select.form-control {
+    background-color: $aqua;
+    color           : white;
+    border-radius   : 5px;
+    transition      : all 1s ease;
+    &:active,
+    &:hover,
+    &:focus {
+        background-color: white;
+        color           : $blue-ultradark;
+    }
 }
-
 .group-well {
-  @extend .well;
-  background-color: $charcoal-dark;
-  padding: 1rem;
-  label {
-    color: white;
-  }
+    @extend .well;
+    background-color: $charcoal-dark;
+    padding         : 1rem;
+    label {
+        color: white;
+    }
 }

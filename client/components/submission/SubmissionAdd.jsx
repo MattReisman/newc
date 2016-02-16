@@ -30,7 +30,7 @@ SubmissionAdd = React.createClass({
             .findDOMNode(this.refs.subjectInput)
             .value
             .trim();
-        var textcontent = ReactDOM
+        var textContent = ReactDOM
             .findDOMNode(this.refs.textcontentInput)
             .value
             .trim();
@@ -43,11 +43,12 @@ SubmissionAdd = React.createClass({
             .value
             .trim();
         Submissions.insert({
-            subId: _id,
             subject: subject,
-            textcontent: textcontent,
+            textContent: textContent,
             locationLat: locationLat,
             locationLon: locationLon,
+            attachments: 'textContent',
+            trailSelect: 'trailSelect',
             createdAt: new Date(),
             owner: Meteor.userId(),
             username: Meteor

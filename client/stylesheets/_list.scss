@@ -9,16 +9,18 @@
     // background-color: rgba($blue-bright, .5);
     border: none;
     @extend .z-depth-1;
+    background-color: $blue-ultradark;
     span {
-        color: white;
+        color: $glow-aqua;
+
         transition     : all 0.7s ease-in;
     }
     &:hover {
-        background-color: $aqua;
+        background-color: $glow-aqua;
         @extend .z-depth-5;
         border          : none;
         span {
-            color: $red;
+            color: $blue-ultradark;
         }
     }
 }
@@ -49,7 +51,7 @@ li .subDate {
 }
 li .time-elapsed {
     font-style : italic;
-    color      : #59c;
+    color      : $aqua-dull;
     margin-left: 1.5rem;
 }
 li.checked {

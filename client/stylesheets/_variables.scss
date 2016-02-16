@@ -1,5 +1,10 @@
 // Original COLORS
-$aqua: #69B5A3;
+$glow-aqua: #09ECEB;
+$aqua-glow: #09ECEB;
+$aqua-dull: hsl(180, 32%, 78%);
+$aqua: $aqua-dull;
+$aqua-dark: hsla(180,35%,42%,1);
+
 $blue-bright: hsla(218,78%,83%,1);
 $blue-light: #8699BB;
 

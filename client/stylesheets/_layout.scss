@@ -22,7 +22,12 @@ $header-height: 4rem;
     // max-width       : 900px;
     padding         : 0.5rem;
     background-color: $blue-ultradark;
-    box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+    // box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+    @extend .z-depth-1;
+    transition: all .5s ease-in-out;
+    &:hover {
+      @extend .z-depth-4;
+    }
     .header-top-left {
         float: left;
         width: 25%;
@@ -77,7 +82,7 @@ $header-height: 4rem;
             }
             .additional-link-container {
               a {
-                color: $blue-bright;
+                color: $glow-aqua;
                 text-transform: uppercase;
                 font-size: 1rem;
               }
@@ -87,7 +92,7 @@ $header-height: 4rem;
                 font-size: 1.5rem;
                 line-height: 2.6rem;
                 text-transform: uppercase;
-                color: $blue-bright;
+                color: $glow-aqua;
             }
             .login-button {
                 background-color: $blue-dark;
