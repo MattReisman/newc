@@ -1,9 +1,9 @@
 Map = React.createClass({
     render() {
         return (
-<div className='container'>
-  /*<TestMap />
-*/
+<div className='map-outer-container'>
+<TestMap />
+
 </div>
         );
     }

@@ -1,4 +1,3 @@
-
 body {
     font-family          : "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color     : #315481;
@@ -74,82 +73,6 @@ form {
 .new-submission input:focus {
     outline: 0;
 }
-ul {
-    margin    : 0;
-    padding   : 0;
-    background: white;
-}
-.delete {
-    float      : right;
-    font-weight: bold;
-    background : none;
-    font-size  : 1em;
-    border     : none;
-    position   : relative;
-}
-li {
-    position     : relative;
-    list-style   : none;
-    padding      : 15px;
-    border-bottom: #eee solid 1px;
-}
-li .text {
-    margin-left: 1rem;
-    color      : #204A6A;
-    /*color: #35455A;*/
-}
-li .subDate {
-    margin-left: 1rem;
-    text-align : right;
-    color      : #aaa;
-    font-size  : 0.8rem;
-}
-li .time-elapsed {
-    font-style : italic;
-    color      : #59c;
-    margin-left: 1.5rem;
-}
-li.checked {
-    color: #888;
-}
-li.checked .text {
-    text-decoration: line-through;
-    color          : #777;
-}
-li.private {
-    background  : #eee;
-    border-color: #ddd;
-}
-header .hide-completed {
-    float: right;
-}
-.toggle-private {
-    margin-left: 5px;
-}
-@media (max-width: 600px) {
-    li {
-        padding: 12px 15px;
-    }
-    .search {
-        width: 150px;
-        clear: both;
-    }
-    .new-submission input {
-        padding-bottom: 5px;
-    }
-}
-// subheader
-.view-select {
-    padding         : 1rem;
-    border-radius   : 5px;
-    text-align      : center;
-    background-color: $blue-dark;
-    color           : white;
-    .row {
-        width : 100%;
-        margin: 0.2rem auto;
-    }
-}
 .footer {
     padding: 0.2rem;
 }
@@ -171,17 +94,16 @@ header .hide-completed {
     }
 }
 .shrink-small {
-  font-size: .5rem;
-  line-height: 1rem;
+    font-size  : 0.5rem;
+    line-height: 1rem;
 }
-
 .hidden-ultrasmall {
-  // visibility: hidden;
-  font-size: .7rem;
+    // visibility: hidden;
+    font-size: 0.7rem;
 }
 @media screen and (min-width: 350px) {
-  .hidden-ultrasmall {
-    // visibility: visible;
-    font-size: 1.2rem;
-  }
+    .hidden-ultrasmall {
+        // visibility: visible;
+        font-size: 1.2rem;
+    }
 }

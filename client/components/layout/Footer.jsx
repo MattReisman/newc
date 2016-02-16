@@ -14,7 +14,6 @@ Footer = React.createClass({
         return (
 <div className='footer'>
 { this.data.currentUser ?
-
                         <div className='row'>
                             <div className='col-xs-3 col-view-select'>
                                 <a href='list'>

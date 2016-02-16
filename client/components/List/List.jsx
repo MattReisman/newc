@@ -28,12 +28,15 @@ List = React.createClass({
                 .fetch()
         };
     },
+    viewCurrentRoute() {
+      return FlowRouter.getRouteName();
+    },
     renderSubmissions() {
         return this
             .data
             .submissions
             .map((submission) => {
-                return <Submission key={submission._id} submission={submission}/>;
+                return <ListItem key={submission._id} submission={submission}/>;
             });
     },
     handleSubmit(event) {
@@ -46,7 +49,11 @@ List = React.createClass({
             .value
             .trim();
         Submissions.insert({
-            text: text,
+            subId: _id,
+            subject: subject,
+            textcontent: textcontent,
+            locationLat: locationLat,
+            locationLon: locationLon,
             createdAt: new Date(),
             owner: Meteor.userId(),
             username: Meteor
@@ -73,6 +80,7 @@ List = React.createClass({
     render() {
         return (
             <ul>
+{this.viewCurrentRoute()}
                 {this.renderSubmissions()}
             </ul>
         );

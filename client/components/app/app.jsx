@@ -29,10 +29,7 @@ App = React.createClass({
         };
     },
     renderSubmissions() {
-        return this
-            .data
-            .submissions
-            .map((submission) => {
+        return this.data.submissions.map((submission) => {
                 return <Submission key={submission._id} submission={submission}/>;
             });
     },
@@ -72,11 +69,7 @@ App = React.createClass({
     },
     render() {
         return (
-            <div className="container app-main">
-                <form className="new-submission" onSubmit={this.handleSubmit}>
-                    <input type="text" ref="textInput" placeholder="Type to add new tasks"/>
-                </form>
-            </div>
+            <h1>choose a view</h1>
         );
     }
 });

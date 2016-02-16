@@ -1,4 +1,4 @@
-AddSubmission = React.createClass({
+SubmissionAdd = React.createClass({
     mixins: [ReactMeteorData],
     getMeteorData() {
         let query = {};
@@ -26,36 +26,40 @@ AddSubmission = React.createClass({
 
         // Pull text from field
 
-        var text = React
-            .findDOMNode(this.refs.textInput)
+        var subject = ReactDOM
+            .findDOMNode(this.refs.subjectInput)
+            .value
+            .trim();
+        var textcontent = ReactDOM
+            .findDOMNode(this.refs.textcontentInput)
+            .value
+            .trim();
+        var locationLat = ReactDOM
+            .findDOMNode(this.refs.locationLatInput)
+            .value
+            .trim();
+        var locationLon = ReactDOM
+            .findDOMNode(this.refs.locationLonInput)
             .value
             .trim();
         Submissions.insert({
+            subId: _id,
             subject: subject,
-            content: content,
-            location: location,
+            textcontent: textcontent,
+            locationLat: locationLat,
+            locationLon: locationLon,
             createdAt: new Date(),
             owner: Meteor.userId(),
             username: Meteor
                 .user()
-                .username
+                .username,
         });
 
         // Clear form
 
-        React
-            .findDOMNode(this.refs.textInput)
+        ReactDOM
+            .findDOMNode(this.refs.subjectInput)
             .value = "";
-    },
-    toggleHideCompleted() {
-        this.setState({
-            hideCompleted: !this.state.hideCompleted
-        });
-    },
-    toggleShowCompleted() {
-        this.setState({
-            showCompleted: !this.state.showCompleted
-        });
     },
     render() {
         return (
@@ -73,7 +77,7 @@ AddSubmission = React.createClass({
                                     Subject</span>
                             </label>
                             <div className="col-lg-10">
-                                <input type="text" className="form-control" id="subjectAdd" placeholder="50 characters or less"/>
+                                <input type="text" ref="subjectInput" className="form-control" id="subjectAdd" placeholder="50 characters or less"/>
                             </div>
                         </div>
 
@@ -84,7 +88,7 @@ AddSubmission = React.createClass({
                                     Content</span>
                             </label>
                             <div className="col-lg-10">
-                                <textarea className="form-control" rows={3} id="textArea" placeholder="add Content" defaultValue={""}/>
+                                <textarea className="form-control" ref="textcontentInput" rows={3} id="textArea" placeholder="add Content" defaultValue={""}/>
 
                             </div>
                         </div>
@@ -104,13 +108,16 @@ AddSubmission = React.createClass({
                             </div>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="locationAdd" className="col-lg-2 control-label">
+                            <label className="col-lg-2 control-label">
                                 <i className="fa fa-map-marker"></i>
                                 <span className='icon-descriptor'>
                                     Location</span>
                             </label>
-                            <div className="col-lg-10">
-                                <input type="text" className="form-control" id="locationAdd" placeholder="address or gps coordinates"/>
+                            <div className="col-lg-5">
+                                <input type="text" className="form-control" ref='locationLatInput' id="locationAdd" placeholder="address or gps coordinates"/>
+                            </div>
+                            <div className="col-lg-5">
+                                <input type="text" className="form-control" ref='locationLonInput' id="locationAdd" placeholder="address or gps coordinates"/>
                             </div>
                         </div>
                         <div className="form-group">
@@ -139,5 +146,5 @@ AddSubmission = React.createClass({
                 </form>
             </div>
         );
-    }
+    },
 });

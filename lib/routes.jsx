@@ -33,10 +33,18 @@ FlowRouter.route('/trail', {
   },
 });
 
+
 FlowRouter.route('/add', {
-  name: 'AddSubmission',
+  name: 'SubmissionAdd',
   action(params) {
-    renderMainLayoutWith(<AddSubmission />);
+    renderMainLayoutWith(<SubmissionAdd />);
+  },
+});
+
+FlowRouter.route('/submission/:_id', {
+  name: 'SubmissionPost',
+  action(params) {
+    renderMainLayoutWith( <SubmissionPost _id={params._id} />);
   },
 });
 

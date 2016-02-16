@@ -11,8 +11,8 @@ TestMap = React.createClass({
   },
   _mapOptions() {
     return {
-      center: new google.maps.LatLng(-37.8136, 144.9631),
-      zoom: 8
+      center: new google.maps.LatLng(42.180278, -70.972661),
+      zoom: 15
     };
   },
   render() {
