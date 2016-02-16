@@ -24,12 +24,11 @@ Submission = React.createClass({
         const elapsedTime = moment(rawDate)
             .startOf(rawDate)
             .fromNow();
-        // const momDate = "test';
 
         return (
             <li className={submissionClassName}>
                 <button className='delete' onClick={this.deleteThisSubmission}>
-                    &times;
+                    <i className="fa fa-trash-o"></i>
                 </button>
                 <input type='checkbox' readOnly={true} checked={this.props.submission.checked} onClick={this.toggleChecked}/>
                 <span className='text'>

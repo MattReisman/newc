@@ -1,0 +1,109 @@
+body {
+    font-family          : "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color     : #315481;
+    background-image     : linear-gradient(to bottom, $blue-light, $blue-ultradark 90%);
+    background-attachment: fixed;
+    position             : absolute;
+    top                  : 0;
+    bottom               : 0;
+    left                 : 0;
+    right                : 0;
+    padding              : 0;
+    margin               : 0;
+    font-size            : 14px;
+}
+.img-responsive {
+    height: auto;
+    width : 100%;
+}
+.img-logo-inline {
+    height: 2rem;
+    width : 2rem;
+}
+.app-header {
+    color     : #eee;
+    text-align: center;
+}
+.app-header > h1 {
+    color: #59c;
+}
+.app-header > .row {
+    text-align: left;
+}
+.container {
+    margin          : 0 auto;
+    min-height      : 100%;
+    border-radius   : 0 0 10px 10px;
+    padding         : 0 0.1rem 1rem;
+    background-color: rgba(255, 255, 255, 0);
+}
+.app-header {
+    background      : #d2edf4;
+    background-image: linear-gradient(to bottom, #35455A, #204A6A 100%);
+    padding         : 20px 15px 15px;
+    position        : relative;
+}
+#login-buttons {
+    display: block;
+}
+h1 {
+    font-size    : 1.5em;
+    margin       : 0;
+    color        : #ddd;
+    margin-bottom: 10px;
+    display      : inline-block;
+    margin-right : 1em;
+}
+form {
+    margin-top   : 10px;
+    margin-bottom: -10px;
+    position     : relative;
+}
+.new-submission input {
+    box-sizing   : border-box;
+    padding      : 1rem;
+    background   : transparent;
+    border       : 1px solid #aaa;
+    width        : 100%;
+    padding-right: 80px;
+    font-size    : 1em;
+    color        : #204A6A;
+    background   : rgba(255,255,255,.9);
+}
+.new-submission input:focus {
+    outline: 0;
+}
+.footer {
+    padding: 0.2rem;
+}
+.col-view-select {
+    padding: 0;
+    .btn:active,
+    .btn.active {
+        background-color: red;
+    }
+    .btn-view-select {
+        width           : 95%;
+        height          : 4rem;
+        color           : $blue-dark;
+        background-color: white;
+    }
+    .btn-danger {
+        width : 95%;
+        height: 4rem;
+    }
+}
+.shrink-small {
+    font-size  : 0.5rem;
+    line-height: 1rem;
+}
+.hidden-ultrasmall {
+    // visibility: hidden;
+    font-size: 0.7rem;
+}
+@media screen and (min-width: 350px) {
+    .hidden-ultrasmall {
+        // visibility: visible;
+        font-size: 1.2rem;
+    }
+}
