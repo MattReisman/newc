@@ -33,7 +33,7 @@ $header-height: 4rem;
     // max-width       : 900px;
     padding         : 0.5rem;
     background-color: $blue-ultradark;
-    box-shadow      : 0 0 4px 0 rgba(0,0,0,.5);
+    box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
     .header-top-left {
         float: left;
         width: 25%;
@@ -79,6 +79,20 @@ $header-height: 4rem;
             font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
             text-transform: uppercase;
             font-weight: normal;
+            input#login-username-or-email-label-and-input, input#login-username-or-email {
+              background-color: white;
+              @include placecolor($blue-mid);
+            }
+            #login-dropdown-list {
+              @extend .z-depth-4;
+            }
+            .additional-link-container {
+              a {
+                color: $blue-bright;
+                text-transform: uppercase;
+                font-size: 1rem;
+              }
+            }
             a {
                 text-decoration: none;
                 font-size: 1.5rem;
@@ -126,6 +140,7 @@ $header-height: 4rem;
     text-align      : center;
     background-color: $blue-ultradark;
     color           : $white;
+    box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
     a {
         text-decoration: none;
         color          : white;

@@ -1,0 +1,19 @@
+.add-submission {
+    // background-image: radial-gradient($blue-light, $blue-bright);
+    background: $blue-light;
+    @extend .z-well;
+    h1 {
+        color: $blue-bright;
+    }
+    .new-submission {
+        input.form-control {
+            background-color: white;
+            @extend .z-well;
+            background-color: $charcoal;
+        }
+        @include placecolor($blue-bright);
+    }
+    button {
+        @extend .z-pop;
+    }
+}

@@ -29,10 +29,12 @@ Footer = React.createClass({
                     </div>
 
                     <div className='col-xs-3 col-view-select'>
+                      <a href='add'>
                         <button className='btn btn-danger'>
                             <i className='fa fa-plus'></i>
                             <span className='hidden-ultrasmall'> Entry</span>
                         </button>
+                      </a>
                     </div>
                 </div>
 

@@ -33,6 +33,14 @@ FlowRouter.route('/trail', {
   },
 });
 
+FlowRouter.route('/add', {
+  name: 'AddSubmission',
+  action(params) {
+    renderMainLayoutWith(<AddSubmission />);
+  },
+});
+
+
 FlowRouter.route('/login', {
   name: 'Login',
   action(params) {
